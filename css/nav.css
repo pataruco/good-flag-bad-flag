@@ -1,0 +1,241 @@
+/* 
+Project Name: Flag Design Quiz
+Client: FEWD29 GA Final Project
+Author: Kio McLoughlin
+*/
+
+/******************************************
+/* COLOURS
+/*******************************************/
+
+/* add a list of colours used in the project */
+SCENE 1
+Text: #FFFFFF white
+Paper: #F44336 red
+Background | Dropcap: #FF9800 orange
+Shadow: #727272 grey
+
+SCENE 2
+Text: #FFFFFF white
+Paper: #009688 teal 
+Background | Dropcap: #CDDC39 lime
+Shadow: #727272 grey
+
+SCENE 3
+Text: #FFFFFF white
+Paper: #607D8B blue grey
+Background | Dropcap: #FF4081 pink
+Shadow: #727272 grey
+
+SCENE 4
+Text: #212121 black
+Paper: #FFC107 yellow
+Background | Dropcap: #536DFE violet
+Shadow: #727272 grey
+
+SCENE 5
+Text: #FFFFFF white
+Paper: #4CAF50 green
+Background | Dropcap: #7C4DFF purple
+Shadow: #727272 grey
+
+SCENE 6
+Text: #FFFFFF white
+Paper: #FF5722 orange
+Background | Dropcap: #536DFE lilac
+Shadow: #727272 grey
+
+SCENE 7
+Text: #FFFFFF white
+Paper: #673AB7
+Background | Dropcap: #FFC107
+Shadow: #727272 grey
+
+SCENE 8
+Text: #212121 black
+Paper: #8BC34A light green
+Background | Dropcap: #448AFF blue
+Shadow: #727272 grey
+
+SCENE 9
+Text: #FFFFFF white
+Paper: #2196F3 blue
+Background | Dropcap: #FF5722 orange
+Shadow: #727272 grey
+
+SCENE 10
+Text: 
+Paper:
+Background | Dropcap: #F5F5F5 white
+Shadow: #727272 grey
+
+
+
+
+/******************************************
+/* SENSIBLE DEFAULTS                   
+/*******************************************/
+
+* {
+     box-sizing: border-box;
+}
+
+/******************************************
+/* TYPOGRAPHY
+/*******************************************/
+
+/* add type styles here */
+/*Fira+Sans:400,300,500,700,500italic,300italic,400italic*/
+
+/******************************************
+/* LAYOUT                   
+/*******************************************/
+
+.main_h {
+ position: fixed;
+ top: 0px;
+ max-height: 4.5em;
+ z-index: 999;
+ width: 100%;
+ padding-top: 1em;
+ background: none;
+ overflow: hidden;
+ -webkit-transition: all 0.3s;
+ transition: all 0.3s;
+ opacity: 0;
+ top: -6.25em;
+ padding-bottom: 6px;
+ font-family: "Fira Sans", sans-serif;
+}
+@media only screen and (max-width: 70em) {
+
+.main_h {
+ padding-top: 0em;
+}
+}
+
+.open-nav {
+ max-height: 25em !important;
+}
+
+.open-nav .mobile-toggle {
+ transform: rotate(-360deg);
+ -webkit-transform: rotate(-360deg);
+}
+
+.sticky {
+ background-color: rgba(255, 255, 255, 0.93);
+ opacity: 1;
+ top: 0em;
+ border-bottom: 1px solid gainsboro;
+ box-shadow: 19px 18px 0px -3px rgba(0,0,0,0.65);
+}
+
+nav {
+ float: right;
+ width: 60%;
+ margin-right: 10%;
+}
+
+@media only screen and (max-width: 70em) {
+
+nav {
+ width: 100%;
+}
+}
+
+nav ul {
+ list-style: none;
+ overflow: hidden;
+ text-align: right;
+ float: right;
+}
+@media only screen and (max-width: 70em) {
+
+nav ul {
+ padding-top: 1em;
+ margin-bottom: 1.375em;
+ float: left;
+ text-align: center;
+ width: 100%;
+}
+}
+
+nav ul li {
+ display: inline-block;
+ margin-left: 2.1875em;
+ line-height: 1.5;
+}
+@media only screen and (max-width: 70em) {
+
+nav ul li {
+ width: 100%;
+ padding: 0.4375em 0;
+ margin: 0;
+}
+}
+
+nav ul a {
+ color: #888888;
+ text-transform: uppercase;
+ font-size: 1.1em;
+}
+
+.mobile-toggle {
+ display: none;
+ cursor: pointer;
+ font-size: 1.25em;
+ position: absolute;
+ right: 1.375em;
+ top: 1.2em;
+ width: 1.875em;
+ -webkit-transition: all 200ms ease-in;
+ -moz-transition: all 200ms ease-in;
+ transition: all 200ms ease-in;
+}
+@media only screen and (max-width: 70em) {
+
+.mobile-toggle {
+ display: block;
+}
+}
+
+.mobile-toggle span {
+ width: 1.875em;
+ height: .25em;
+ margin-bottom: .375em;
+ border-radius: 62.5em;
+ background: #8f8f8f;
+ display: block;
+}
+
+
+/******************************************
+/* HELPER CLASSES
+/*******************************************/
+
+/* Clearfix */
+.clearfix:before,
+.clearfix:after {
+     content: " ";
+     display: table;
+}
+.clearfix:after {
+     clear:both;
+}
+
+.is-hidden {
+     display: none;
+}
+.is-visible {
+     display: block;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES                   
+/*******************************************/
+
+
+
+

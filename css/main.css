@@ -1,0 +1,920 @@
+/* 
+Project Name: Flag Design Quiz
+Client: FEWD29 GA Final Project
+Author: Kio McLoughlin
+*/
+
+/******************************************
+/* COLOURS
+/*******************************************/
+
+/* add a list of colours used in the project */
+SCENE 1
+Text: #FFFFFF white
+Paper: #F44336 red
+Background | Dropcap: #FF9800 orange
+Shadow: #727272 grey
+
+SCENE 2
+Text: #FFFFFF white
+Paper: #009688 teal 
+Background | Dropcap: #CDDC39 lime
+Shadow: #727272 grey
+
+SCENE 3
+Text: #FFFFFF white
+Paper: #607D8B blue grey
+Background | Dropcap: #FF4081 pink
+Shadow: #727272 grey
+
+SCENE 4
+Text: #212121 black
+Paper: #FFC107 yellow
+Background | Dropcap: #536DFE violet
+Shadow: #727272 grey
+
+SCENE 5
+Text: #FFFFFF white
+Paper: #4CAF50 green
+Background | Dropcap: #7C4DFF purple
+Shadow: #727272 grey
+
+SCENE 6
+Text: #FFFFFF white
+Paper: #FF5722 orange
+Background | Dropcap: #536DFE lilac
+Shadow: #727272 grey
+
+SCENE 7
+Text: #FFFFFF white
+Paper: #673AB7
+Background | Dropcap: #FFC107
+Shadow: #727272 grey
+
+SCENE 8
+Text: #212121 black
+Paper: #8BC34A light green
+Background | Dropcap: #448AFF blue
+Shadow: #727272 grey
+
+SCENE 9
+Text: #FFFFFF white
+Paper: #2196F3 blue
+Background | Dropcap: #FF5722 orange
+Shadow: #727272 grey
+
+SCENE 10
+Text: 
+Paper:
+Background | Dropcap: #F5F5F5 white
+Shadow: #727272 grey
+
+
+
+
+/******************************************
+/* SENSIBLE DEFAULTS                   
+/*******************************************/
+
+* {
+     box-sizing: border-box;
+}
+
+/******************************************
+/* TYPOGRAPHY
+/*******************************************/
+
+/* add type styles here */
+/*Fira+Sans:400,300,500,700,500italic,300italic,400italic*/
+
+
+/******************************************
+/* LAYOUT                   
+/*******************************************/
+
+/*START BREAKPOINT 0 FOR SMALLEST VIEWPORT*/
+@media screen and (min-width: 5em) {
+     body {
+          min-height: 100vh;
+          font-family: 'Fira Sans', sans-serif;
+     }
+
+     .site-container {
+          width: 100%;
+          margin: 0 auto;
+          color: #F5F5F5;
+     }
+
+     h1 {
+          font-weight: 500;
+     }
+
+     h2 {
+          font-weight: 300;
+          font-size: 1em;
+          margin: 0;
+     }
+
+     h2:first-of-type::first-letter {
+          initial-letter: 2;
+     }
+
+     p {
+          font-weight: 300;
+          font-size: .8em;
+     }
+
+     blockquote {
+          margin: 0 auto;
+          margin-bottom: 5%;
+          font-weight: 500;
+          font-size: 1.2em;
+          border-right: solid .5em #FF9800;
+          border-bottom: solid .5em #FF9800;
+          padding: .5em;
+          box-shadow: 19px 18px 0px -3px rgba(0,0,0,0.65);
+          max-width: 30em;
+     }
+
+     cite {
+          font-size: .75em;
+     }
+
+     .dropcap {
+          text-shadow: 19px 18px 0px rgba(0,0,0,0.65);
+     }
+
+     a {
+          text-decoration: none;
+     }
+
+     .promptcontainer {
+          display: block;
+          position: relative;
+          text-align: center;
+     }
+
+     .scrollprompt {
+          /*margin: 0 auto;*/
+     } 
+
+     .summary {
+          padding-left: 2em;
+     }
+
+     /*BEGIN SIDEBAR NAV STYLING*/
+     /*.sidebar-nav {
+          display:none;
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          top: 0;
+          width: 6em;
+          z-index: 12;
+          background: rgba(0, 0, 0, 0.15);
+     }
+
+     .sidebar-controls {
+          position: relative;
+          top: 25vh;
+     }
+
+     .sidebar-nav li {
+          list-style: none;
+     }
+
+     .active {
+          width: 2.5vw;
+          height: 2.5vh;
+          border-radius: 50%;
+          background: blue;
+          margin: 1em 0;
+     }
+
+     .arrow {
+          width: 2.5vw;
+          height: 2.5vh;
+          border-radius: 50%;
+          background: red;
+          margin: 0 auto;
+     }*/
+
+    /* .sidebar-nav .arrow {
+          position: absolute;
+          width: 3em;
+          height: 1.5em;
+          -webkit-transform: skew(15deg);
+          -moz-transform: skew(15deg);
+          -o-transform: skew(15deg);
+          right: -2em;
+          background: rgba(0, 0, 0, 0.15);
+     }*/
+     /*END SIDEBAR NAV STYLING*/
+
+     .arrowcontainer {
+          display: block;
+          position: relative;
+          text-align: center;
+     }
+
+     .scrollarrow {
+          display: inline-block;
+          margin: 0 auto;
+          animation-duration: 1.5s;
+     }
+
+/********************************************************************/
+     /*BEGIN SCROLLMAGIC RELATED STYLING*/
+          /*BEGIN SCENE STORY PANELS STYLING FOR MAIN PAGE*/
+     .stagecontainer {
+          height: 100vh;
+     }
+
+     .backgroundfills {
+          height: 100vh;
+          width: 100vw;
+     }
+
+     .card {
+          margin: 0 auto;
+          min-height: 60%;
+          max-height: 60%;
+          max-width: 100vw;
+          min-width: 80vw;
+          padding: 15vh 5vw;
+          border: solid, .2em, #727272;
+     } 
+
+
+     /*SPECIFIC FIXES PER INDIVIDUAL CARD*/
+     .cardtext2 {
+          padding: 20vh 0;
+     }
+
+
+/********************************************************************/
+
+
+     .scenecolor1 {
+          background-color: #FF9800;
+     }
+
+     .scenecolor2 {
+          background-color: #CDDC39;
+     }
+
+     .scenecolor3 {
+          background-color: #FF4081;
+     }
+
+     .scenecolor4 {
+          background-color: #536DFE;
+     }
+
+     .scenecolor5 {
+          background-color: #7C4DFF;
+     }
+
+     .scenecolor6 {
+          background-color: #536DFE;
+     }
+
+     .scenecolor7 {
+          background-color: #FFC107;
+     }
+
+     .scenecolor8 {
+          background-color: #607D8B;
+     }
+
+     .scenecolor9 {
+          background-color: #FFC107;
+     }
+
+     .scenecolor10 {
+          background-color: #FFC107;
+     }
+
+     .cardcolor1 {
+          color: #FFFFFF;
+          background-color: #F44336;
+          box-shadow: 19px 18px 0px -3px rgba(0,0,0,0.65);
+     }
+
+     .cardcolor2 {
+          color: #FFFFFF;
+          background-color: #009688;
+          box-shadow: 19px 18px 0px -3px rgba(0,0,0,0.65);
+     }
+
+     .cardcolor3 {
+          color: #FFFFFF;
+          background-color: #607D8B;
+          box-shadow: 19px 18px 0px -3px rgba(0,0,0,0.65);
+     }
+
+     .cardcolor4 {
+          color: #FFFFFF;
+          background-color: #FFC107;
+          box-shadow: 19px 18px 0px -3px rgba(0,0,0,0.65);
+     }
+
+     .cardcolor5 {
+          color: #FFFFFF;
+          background-color: #4CAF50;
+          box-shadow: 19px 18px 0px -3px rgba(0,0,0,0.65);
+     }
+
+     .cardcolor6 {
+          color: #FFFFFF;
+          background-color: #FF5722;
+          box-shadow: 19px 18px 0px -3px rgba(0,0,0,0.65);
+     }
+
+     .cardcolor7 {
+          color: #FFFFFF;
+          background-color: #673AB7;
+          box-shadow: 19px 18px 0px -3px rgba(0,0,0,0.65);
+     }
+
+     .cardcolor8 {
+          color: #FFFFFF;
+          background-color: #8BC34A;
+          box-shadow: 19px 18px 0px -3px rgba(0,0,0,0.65);
+     }
+
+     .cardcolor9 {
+          color: #FFFFFF;
+          background-color: #2196F3;
+          box-shadow: 19px 18px 0px -3px rgba(0,0,0,0.65);
+     }
+
+     .cardcolor10 {
+          color: #FFFFFF;
+          background-color: #F44336;
+          box-shadow: 19px 18px 0px -3px rgba(0,0,0,0.65);
+     }
+     /*END SCROLLMAGIC RELATED STYLING*/
+
+
+     /*BEGIN STYLING AROUND FLAG AND QUIZ DISPLAY SECTION*/
+     .quizcard {
+          min-height: 100vh;
+          max-width: 100vw;
+          min-width: 80vw;
+          /*padding: 5vh 5vw;*/
+          box-shadow: 19px 18px 0px -3px rgba(0,0,0,0.65);
+     }
+
+     .gamerules {
+          display: none;
+          position: absolute;
+          min-height: 100%;
+          width: 80vw;
+          top: -15em;
+          padding: 1em;
+          background-color: #FF5722;
+          box-shadow: 19px 18px 0px -3px rgba(0,0,0,0.65); 
+     }
+
+     .image_panel {
+          position: relative;
+          display: block;
+          min-height: 45vh;
+          max-height: 45vh
+     }
+
+     .feedback_panel {
+          position: relative;
+          display: block;
+          margin-top: 10vh;
+          min-height: 20vh;
+          max-height: 20vh
+          max-width: 45em;
+     }
+
+     .quiz_panel {
+          position: relative;
+          display: block;
+          min-height: 15vh;
+          max-height: 15vh
+          color: #ffffff;
+          max-width: 45em;
+          /*font-size: 1em;*/
+     }
+
+
+
+     .quiztitle {
+          display: block;
+          position: relative;
+          margin: 0;
+          padding: 0em 2em;
+          max-width: 45em;
+          text-align: center;
+          box-shadow: 19px 18px 0px -3px rgba(0,0,0,0.65);
+          background-color: #F44336;
+          /*border: solid 3px #FF5722;*/
+     }
+
+     .where_button {
+          position: absolute;
+          display: none;
+          top: .5em;
+          right:.5em;
+          color: #ffffff;
+          border-bottom: 0.125em solid #03A9F4;
+          margin-bottom: .2em;
+     }
+
+     .flagdisplay {
+          display: none;
+          margin: 1em auto;
+          max-width: 90vw;
+          max-height:35vh;
+          -o-object-fit: scale-down;
+          object-fit: scale-down;
+          box-shadow: 19px 18px 0px -3px rgba(0,0,0,0.65);
+     }
+
+
+     /*do not change this - flag is now displaying correctly*/
+     img {
+          display: block;
+     }
+
+     .principles_hint {
+          display: none;
+          box-shadow: 19px 18px 0px -3px rgba(0,0,0,0.65);
+          padding: .5em;
+          max-width: 45em;
+          -webkit-animation-delay: 0s;
+          -webkit-animation-duration: .1s;
+     }
+
+     .mapdisplay {
+          position: absolute;
+          display: none;
+          box-shadow: 19px 18px 0px -3px rgba(0,0,0,0.65);
+          -webkit-animation-delay: 1s;
+          -webkit-animation-duration: 1s;
+          z-index: 10;
+     }
+
+     .scoreboard {
+          visibility: hidden;
+          position: absolute;
+          right: -2vw;
+          /*top: -2em;*/
+          width: 18vw;
+          max-width: 45em;
+          font-style: italic;
+          background-color: #FF5722;
+          text-align: center;
+          box-shadow: 19px 18px 0px -3px rgba(0,0,0,0.65);
+          text-shadow: 19px 18px 0px -3px rgba(0,0,0,0.65);
+          z-index: 2;
+     }
+
+     .scoring {
+          display: inline-block;
+          font-size: 3em;
+          z-index: 20;
+          -webkit-animation-delay: .1s;
+          color: #ffffff;
+     }
+
+     
+
+     .answer_explanation {
+          display: none;
+          min-height: 100%;
+          top: -2.5em;
+          width: 88vw;
+          margin: 0;
+          max-width: 45em;
+          padding: .5em;
+          background-color: #F44336;
+          border-bottom: solid 3px #FF5722;
+          border-right: solid 3px #FF5722;
+          box-shadow: 19px 18px 0px -3px rgba(0,0,0,0.65); 
+          z-index: 1;    
+     } 
+
+     .answer_explanation p {
+          margin: 0; 
+
+     }
+
+     
+     /**********needs attention for button layout**********/
+     .buttons_container {
+          display: block;
+          position: relative;
+          margin-top: 50%;
+          background-color: ;
+          min-height: 20vh;
+     }
+     .guess1 {
+          float: left;
+          display: inline-block;
+          /*margin-right: 2vw;*/
+          /*width: 22em;*/
+          min-width: 10em;
+          max-width: 22em;
+     }
+
+     .guess2 {
+          float: right;
+          display: inline-block;
+          /*width: 22em;*/
+          min-width: 10em;
+          max-width: 22em;
+     }
+
+
+     .answer_controls {
+          display: inline-block;
+          position: absolute;
+          text-align: center;
+          /*position: relative;*/
+          visibility: hidden;
+          width: 100%;
+          max-height: 3.1875em;
+          /*font-size: 1.2em;*/
+          text-align: center;
+     }
+
+     .play_controls{
+          position: absolute;
+          bottom: 0;
+          /*float: left;*/
+          text-align: center;
+          max-height: 2em;
+          margin: 0;
+     }
+
+     .playcontrol {
+          width: 90vw;
+          display: none;
+     }
+
+     .hintcontrol {
+          width: 90vw;
+          display: none;
+     }
+
+     .showflag {
+          width: 90vw;
+          display: none;
+     }
+     
+     .play_controls .button {
+          -webkit-border-radius: 0;
+          -moz-border-radius: 0;
+          border-radius: 0%;
+          background: #F44336;
+          padding: .625em 1em;
+          text-decoration: none;
+          border: solid 3px #FF5722;
+          max-width: 90%;
+          margin: 0 auto;
+     }
+
+     .answer_controls .button {
+          -webkit-border-radius: 0;
+          -moz-border-radius: 0;
+          border-radius: 0%;
+          background: #FF5722;
+          padding: .625em 1em;
+          text-decoration: none;
+          border: none;
+          outline:none;
+     }
+
+
+
+
+
+
+
+
+     .button:hover {
+          background: #FF5252;
+          text-decoration: none;
+          border: solid 3px #FF5722;
+          padding: 0.4375em 1em;
+     }
+
+
+     .on {
+          display: block;
+     }
+
+    
+     .visible {
+          visibility: visible;
+     }
+
+     .hidden {
+          visibility: hidden;
+     }
+      /*END STYLING AROUND FLAG AND QUIZ DISPLAY SECTION*/
+
+
+
+
+
+
+
+     
+     .site-footer {
+          display: none;
+          color: #FF5722;
+          display: inline-block;
+          background-color: rgba(255, 255, 255, 0.93);
+          opacity: 1;
+          position: fixed;
+          margin: auto 0;
+          bottom: 0;
+          width: 100%;
+          z-index: 10;
+          text-align: center;
+          font-weight: 300;
+     }
+
+     .footerlabel {
+          display: none;
+     }
+
+     .footer-nav {
+          display: none;
+     }
+
+     .footer-nav ul {
+          list-style: none;
+     }
+
+     .footer-nav li {
+          display: none;
+     }
+
+     .footer-nav a {
+          text-decoration: none;
+     }
+}
+/*END BREAKPOINT 0 FOR SMALLEST VIEWPORT*/
+
+
+/*START BREAKPOINT 1 FOR SMALLEST VIEWPORT*/
+@media screen and (min-width: 23em) {
+     .card {
+          margin: 0 auto;
+          /*min-height: */
+          max-height: 50%;
+          max-width: 100vw;
+          min-width: 80vw;
+          padding-top: 15vh:; 
+          padding-left: 5vw;
+          padding-right: 5vw;
+          padding-bottom: 0;
+          border: solid, .2em, #727272;
+     } 
+
+     .quizalignment {
+          padding: 0;
+          height: 35em;
+
+     }
+
+
+}
+/*END BREAKPOINT 1 FOR SMALLEST VIEWPORT*/
+
+
+/*START BREAKPOINT 2 FOR MEDIUM VIEWPORT*/
+@media screen and (min-width: 48em) {
+     
+
+     .backgroundfills {
+          padding: 5% 0;
+          height: 100vh;
+          width: 100vw;
+     }
+
+     .card {
+          width: 70%;
+          max-width: 70em;
+          height: 40%;
+          margin: 0 auto;
+          padding: 15vh 5vw;
+          border: solid, .2em, #727272;
+     } 
+
+     .cardtext2 {
+          padding: 15vh 0;
+     }
+
+
+     h1 {
+          font-weight: 500;
+     }
+
+     h2 {
+          font-weight: 300;
+          font-size: 1.5em;
+          margin: 0;
+     }
+
+     h2:first-of-type::first-letter {
+          initial-letter: 2;
+     }
+
+     p {
+          font-weight: 300;
+          font-size: 1.2em;
+     }
+
+     blockquote {
+          margin: 0 auto;
+          margin-bottom: 5%;
+          font-weight: 500;
+          font-size: 2em;
+          border-right: solid .5em #FF9800;
+          border-bottom: solid .5em #FF9800;
+          padding: .5em;
+          box-shadow: 19px 18px 0px -3px rgba(0,0,0,0.65);
+          max-width: 30em;
+     }
+
+     cite {
+          font-size: 1em;
+     }
+
+     .guess1 {
+          float: left;
+          display: inline-block;
+          /*margin-right: 2vw;*/
+          /*width: 22em;*/
+          min-width: 19em;
+          max-width: 22em;
+     }
+
+     .guess2 {
+          float: right;
+          display: inline-block;
+          /*width: 22em;*/
+          min-width: 19em;
+          max-width: 22em;
+     }
+
+
+
+
+
+
+
+     .site-footer {
+          display: inline-block;
+     }
+
+     .site-footer {
+          display: none;
+          color: #FF5722;
+          display: inline-block;
+          background-color: rgba(255, 255, 255, 0.93);
+          opacity: .8;
+          position: fixed;
+          margin: auto 0;
+          bottom: 0;
+          width: 100%;
+          z-index: 10;
+          text-align: center;
+          font-weight: 300;
+     }
+
+     .footerlabel {
+          display: inline-block;
+     }
+
+     .footer-nav {
+          display: inline-block;
+     }
+
+     .footer-nav ul {
+          list-style: none;
+     }
+
+     .footer-nav li {
+          display:inline-block;
+     }
+
+     .footer-nav a {
+          text-decoration: none;
+     }
+}
+/*END BREAKPOINT 2 FOR MEDIUM VIEWPORT*/
+
+/*START BREAKPOINT 3 FOR LARGE VIEWPORT*/
+@media screen and (min-width: 64em) {
+     .backgroundfills {
+          padding: 10% 0;
+          height: 100vh;
+          width: 100vw;
+     }
+
+     .card {
+          width: 65%;
+          max-width: 56.25em;
+          height: 50%;
+          margin: 0 auto;
+          padding: 5vh 5vw;
+          border: solid, .2em, #727272;
+     } 
+
+     h1 {
+          font-size: 2.5em;
+     }
+
+     h2 {
+          font-weight: 300;
+          font-size: 2.2em;
+          margin: 0;
+     }
+
+     h2:first-of-type::first-letter {
+          initial-letter: 2;
+     }
+
+     p {
+          font-weight: 300;
+          font-size: 1.3em;
+     }
+
+     blockquote {
+          margin: 0 auto;
+          margin-bottom: 5%;
+          font-weight: 500;
+          font-size: 2.5em;
+          border-right: solid .5em #FF9800;
+          border-bottom: solid .5em #FF9800;
+          padding: .5em;
+          box-shadow: 19px 18px 0px -3px rgba(0,0,0,0.65);
+          max-width: 30em;
+     }
+
+     cite {
+          font-size: 1.35em;
+     }
+
+     .guess1 {
+          float: left;
+          display: inline-block;
+          /*margin-right: 2vw;*/
+          /*width: 22em;*/
+          min-width: 22em;
+          /*max-width: 22em;*/
+     }
+
+     .guess2 {
+          float: right;
+          display: inline-block;
+          /*width: 22em;*/
+          min-width: 22em;
+          /*max-width: 22em;*/
+     }
+
+     
+}
+/*END BREAKPOINT 3 FOR LARGE VIEWPORT*/
+
+
+/******************************************
+/* HELPER CLASSES
+/*******************************************/
+
+/* Clearfix */
+.clearfix:before,
+.clearfix:after {
+     content: " ";
+     display: table;
+}
+.clearfix:after {
+     clear:both;
+}
+
+.is-hidden {
+     display: none;
+}
+.is-visible {
+     display: block;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES                   
+/*******************************************/
+
+
+
+

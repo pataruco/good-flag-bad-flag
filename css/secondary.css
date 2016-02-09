@@ -1,0 +1,411 @@
+/* 
+Project Name: Flag Design Quiz
+Client: FEWD29 GA Final Project
+Author: Kio McLoughlin
+*/
+
+/******************************************
+/* COLOURS
+/*******************************************/
+
+/* add a list of colours used in the project */
+SCENE 1
+Text: #FFFFFF white
+Paper: #F44336 red
+Background | Dropcap: #FF9800 orange
+Shadow: #727272 grey
+
+SCENE 2
+Text: #FFFFFF white
+Paper: #009688 teal 
+Background | Dropcap: #CDDC39 lime
+Shadow: #727272 grey
+
+SCENE 3
+Text: #FFFFFF white
+Paper: #607D8B blue grey
+Background | Dropcap: #FF4081 pink
+Shadow: #727272 grey
+
+SCENE 4
+Text: #212121 black
+Paper: #FFC107 yellow
+Background | Dropcap: #536DFE violet
+Shadow: #727272 grey
+
+SCENE 5
+Text: #FFFFFF white
+Paper: #4CAF50 green
+Background | Dropcap: #7C4DFF purple
+Shadow: #727272 grey
+
+SCENE 6
+Text: #FFFFFF white
+Paper: #FF5722 orange
+Background | Dropcap: #536DFE lilac
+Shadow: #727272 grey
+
+SCENE 7
+Text: #FFFFFF white
+Paper: #673AB7
+Background | Dropcap: #FFC107
+Shadow: #727272 grey
+
+SCENE 8
+Text: #212121 black
+Paper: #8BC34A light green
+Background | Dropcap: #448AFF blue
+Shadow: #727272 grey
+
+SCENE 9
+Text: #FFFFFF white
+Paper: #2196F3 blue
+Background | Dropcap: #FF5722 orange
+Shadow: #727272 grey
+
+SCENE 10
+Text: 
+Paper:
+Background | Dropcap: #F5F5F5 white
+Shadow: #727272 grey
+
+
+
+
+/******************************************
+/* SENSIBLE DEFAULTS                   
+/*******************************************/
+
+* {
+     box-sizing: border-box;
+}
+
+/******************************************
+/* TYPOGRAPHY
+/*******************************************/
+
+/* add type styles here */
+/*Fira+Sans:400,300,500,700,500italic,300italic,400italic*/
+
+/******************************************
+/* LAYOUT                   
+/*******************************************/
+
+/*START BREAKPOINT 0 FOR PURE BASICS*/
+@media screen and (min-width: 5em) {
+     body {
+          min-height: 100vh;
+          font-family: 'Fira Sans', sans-serif;
+     }
+
+     .site-container {
+          width: 100%;
+          margin: 0 auto;
+          color: #F5F5F5;
+     }
+
+     .watchpagebackground {
+          position: relative;
+          background-color: #FF5722;
+          width: 100%;
+          /*min-height: 100vh;*/
+          margin: 0 auto;
+          padding-top: 5%;
+          padding-bottom: 10%;
+     }
+
+     .watchcontainer {
+          background-color: #4CAF50;
+          width: 90%;
+          margin: 0 auto;
+          padding: 5em 1.5em;
+          box-shadow: 19px 18px 0px -3px rgba(0,0,0,0.65);
+     }
+
+     .watch {
+          padding: .5em 1em;
+          max-width: 28.25em;
+          box-shadow: 19px 18px 0px -3px rgba(0,0,0,0.65);
+          margin: 0 auto;
+     }
+
+     h2 {
+          text-align: center;
+     }
+
+     p {
+          font-weight: 300;
+     }
+
+     .youtube {
+          /*max-width: 30em;*/
+          max-height: 18.875em;
+          min-height: 10em;
+          margin: 1.5em auto;
+          position: relative;
+          /*padding-bottom: 56.25%; /* 16:9 */
+          padding-top: 1.2em;
+          height: 0;
+     }
+
+     .youtube iframe {
+          position: absolute;
+          max-height: 18.875em;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          box-shadow: 19px 18px 0px -3px rgba(0,0,0,0.65);
+     }
+
+     .soundcloud {
+          /*max-width: 30em;*/
+          /*max-height: 18.875em;*/
+          min-height: 10em;
+          margin: 1.5em auto;
+          position: relative;
+          /*padding-bottom: 56.25%; /* 16:9 */
+          padding-top: 1.2em;
+          height: 0;
+     }
+
+     .soundcloud iframe {
+          position: absolute;
+          /*max-height: 18.875em;*/
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          box-shadow: 19px 18px 0px -3px rgba(0,0,0,0.65);
+     }
+
+
+
+
+
+
+
+/*************ABOUT PAGE STYLING*********/
+     .aboutpagebackground {
+          position: relative;
+          background-color: #FF4081;
+          width: 100%;
+          min-height: 100vh;
+          margin: 0 auto;
+          padding-top: 5%;
+          padding-bottom: 10%;
+     }
+
+     .credits_container {
+          background-color: #607D8B;
+          width: 90%;
+          margin: 0 auto;
+          padding: 5em 1.5em;
+          box-shadow: 19px 18px 0px -3px rgba(0,0,0,0.65);
+     }
+/*************ABOUT PAGE STYLING*********/
+
+
+
+
+
+
+     /*BEGIN SITE FOOTER AND NAV STYLING*/
+     .site-footer {
+          display: none;
+          color: #FF5722;
+          display: inline-block;
+          background-color: rgba(255, 255, 255, 0.93);
+          opacity: 1;
+          position: fixed;
+          margin: auto 0;
+          bottom: 0;
+          width: 100%;
+          z-index: 10;
+          text-align: center;
+          font-weight: 300;
+     }
+
+     .footerlabel {
+          display: none;
+     }
+
+     .footer-nav {
+          display: none;
+     }
+
+     .footer-nav ul {
+          list-style: none;
+     }
+
+     .footer-nav li {
+          display: none;
+     }
+
+     .footer-nav a {
+          text-decoration: none;
+     }
+}
+/*END BREAKPOINT 0 FOR PURE BASICS*/
+
+
+/*START BREAKPOINT 1 FOR SMALLEST VIEWPORT*/
+@media screen and (min-width: 23em) {
+     .site-container {
+          width: 100%;
+          margin: 0 auto;
+          color: #F5F5F5
+     }
+
+     .watchpagebackground {
+          position: relative;
+          background-color: #FF5722;
+          width: 100%;
+          min-height: 100vh;
+          margin: 0 auto;
+          padding-top: 5%;
+          padding-bottom: 10%;
+     }
+
+     .watchcontainer {
+          background-color: #4CAF50;
+          width: 80%;
+          margin: 0 auto;
+          padding: 5em 1.5em;
+          box-shadow: 19px 18px 0px -3px rgba(0,0,0,0.65);
+     }
+
+     .watch {
+          margin: 0 auto;
+     }
+
+}   
+/*END BREAKPOINT 1 FOR SMALLEST VIEWPORT*/
+
+
+/*START BREAKPOINT 2 FOR MEDIUM VIEWPORT*/
+@media screen and (min-width: 48em) {
+     .site-container {
+          width: 100%;
+          margin: 0 auto;
+          color: #F5F5F5
+     }
+
+     .watchpagebackground {
+          position: relative;
+          background-color: #FF5722;
+          width: 100%;
+          min-height: 100vh;
+          margin: 0 auto;
+          padding-top: 5%;
+          padding-bottom: 10%;
+     }
+
+     .watchcontainer {
+          background-color: #4CAF50;
+          width: 75%;
+          margin: 0 auto;
+          padding: 5em 1.5em;
+          box-shadow: 19px 18px 0px -3px rgba(0,0,0,0.65);
+     }
+
+     .site-footer {
+          display: inline-block;
+     }
+
+     .site-footer {
+          display: none;
+          color: #FF5722;
+          display: inline-block;
+          background-color: rgba(255, 255, 255, 0.93);
+          opacity: .8;
+          position: fixed;
+          margin: auto 0;
+          bottom: 0;
+          width: 100%;
+          z-index: 10;
+          text-align: center;
+          font-weight: 300;
+     }
+
+     .footerlabel {
+          display: inline-block;
+     }
+
+     .footer-nav {
+          display: inline-block;
+     }
+
+     .footer-nav ul {
+          list-style: none;
+     }
+
+     .footer-nav li {
+          display:inline-block;
+     }
+
+     .footer-nav a {
+          text-decoration: none;
+     }
+}
+/*END BREAKPOINT 2 FOR MEDIUM VIEWPORT*/
+
+
+/*START BREAKPOINT 3 FOR LARGE VIEWPORT*/
+@media screen and (min-width: 64em) {
+     .site-container {
+          width: 100%;
+          margin: 0 auto;
+          color: #F5F5F5
+     }
+
+     .watchpagebackground {
+          position: relative;
+          background-color: #FF5722;
+          width: 100%;
+          min-height: 100vh;
+          margin: 0 auto;
+          padding-top: 5%;
+          padding-bottom: 10%;
+     }
+
+     .watchcontainer {
+          background-color: #4CAF50;
+          width: 70%;
+          max-width: 70em;
+          margin: 0 auto;
+          padding: 5em 1.5em;
+          box-shadow: 19px 18px 0px -3px rgba(0,0,0,0.65);
+     }
+}
+/*END BREAKPOINT 3 FOR LARGE VIEWPORT*/
+
+/******************************************
+/* HELPER CLASSES
+/*******************************************/
+
+/* Clearfix */
+.clearfix:before,
+.clearfix:after {
+     content: " ";
+     display: table;
+}
+.clearfix:after {
+     clear:both;
+}
+
+.is-hidden {
+     display: none;
+}
+.is-visible {
+     display: block;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES                   
+/*******************************************/
+
+
+
+
