@@ -146,7 +146,7 @@ $(document).ready(function(){
   $('#backtoflagfromprinciplesbutton').on('click', BacktoFlagFromPrinciples);
   $('#good').on('click', getAnswerGood);
   $('#bad').on('click', getAnswerBad);
-  $('mapinfo').on('click', printMap);
+  $('#mapinfo').on('click', printMap);
 
   // Runs once at page load to set up the quiz area and show first flag
   function setQuiz () {
@@ -419,71 +419,66 @@ $(document).ready(function(){
     animation="animated bounceOutUp";
     $("#hintpanel").addClass(animation).on(endanimation,
     function(){
-    $(this).removeClass(animation);
-    $('#hintpanel').removeClass('on');
-    $('#flag').removeClass('off');
+      $(this).removeClass(animation);
+      $('#hintpanel').removeClass('on');
+      $('#flag').removeClass('off');
 
-    animation="animated bounceInDown";
-    $("#flag").addClass(animation).on(endanimation,
-    function(){
-    $(this).removeClass(animation);
-    animation="animated fadeOut";
-    $("#flagbutton").addClass(animation).on(endanimation,
-    function(){
-    $(this).removeClass(animation);
-    $('#flagbutton').removeClass('on');
+      animation="animated bounceInDown";
+      $("#flag").addClass(animation).on(endanimation,
+      function(){
+        $(this).removeClass(animation);
+        animation="animated fadeOut";
+        $("#flagbutton").addClass(animation).on(endanimation,
+        function(){
+          $(this).removeClass(animation);
+          $('#flagbutton').removeClass('on');
+        });
+      });
+      $('#answer_buttons').addClass('visible');
+      animation="animated bounceInLeft";
+      $("#good").addClass(animation).on(endanimation,
+      function(){
+        $(this).removeClass(animation);
+      });
+      animation="animated bounceInRight";
+      $("#bad").addClass(animation).on(endanimation,
+      function(){
+        $(this).removeClass(animation);
+      });
     });
-    });
-
-    $('#answer_buttons').addClass('visible');
-    animation="animated bounceInLeft";
-    $("#good").addClass(animation).on(endanimation,
-    function(){
-    $(this).removeClass(animation);
-    });
-    animation="animated bounceInRight";
-    $("#bad").addClass(animation).on(endanimation,
-    function(){
-    $(this).removeClass(animation);
-    });
-    });
-
-
     animation="animated bounceOutRight";
     $("#map").addClass(animation).on(endanimation,
     function(){
-    $(this).removeClass(animation);
-    $('#map').removeClass('on');
-    $('#flag').removeClass('off');
+      $(this).removeClass(animation);
+      $('#map').removeClass('on');
+      $('#flag').removeClass('off');
 
-    animation="animated bounceInDown";
-    $("#flag").addClass(animation).on(endanimation,
-    function(){
-    $(this).removeClass(animation);
-    animation="animated fadeOut";
-    $("#flagbutton").addClass(animation).on(endanimation,
-    function(){
-    $(this).removeClass(animation);
-    $('#flagbutton').removeClass('on');
-    });
-    });
+      animation="animated bounceInDown";
+      $("#flag").addClass(animation).on(endanimation,
+      function(){
+        $(this).removeClass(animation);
+        animation="animated fadeOut";
+        $("#flagbutton").addClass(animation).on(endanimation,
+        function(){
+          $(this).removeClass(animation);
+          $('#flagbutton').removeClass('on');
+        });
+      });
 
-    $('#answer_buttons').addClass('visible');
-    animation="animated bounceInLeft";
-    $("#good").addClass(animation).on(endanimation,
-    function(){
-    $(this).removeClass(animation);
-    });
-    animation="animated bounceInRight";
-    $("#bad").addClass(animation).on(endanimation,
-    function(){
-    $(this).removeClass(animation);
-    });
+      $('#answer_buttons').addClass('visible');
+      animation="animated bounceInLeft";
+      $("#good").addClass(animation).on(endanimation,
+      function(){
+        $(this).removeClass(animation);
+      });
+
+      animation="animated bounceInRight";
+      $("#bad").addClass(animation).on(endanimation,
+      function(){
+        $(this).removeClass(animation);
+      });
     });
     $('#map').removeClass('on');
-  // $('#good').removeClass('hidden');
-  // $('#bad').removeClass('hidden');
-  // $('#hintbutton').removeClass('off');
   };
 
 
