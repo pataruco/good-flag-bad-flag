@@ -25,6 +25,7 @@ $(document).ready(function(){
 
       return controller.addScene(sceneName);
   }
+
   var scene1 = new ScrollMagic.Scene({
     triggerElement: trigger1,
     duration: "0%",
@@ -37,122 +38,31 @@ $(document).ready(function(){
   controller.addScene(scene1);
 
   var scene2 = new ScrollMagic.Scene({});
-  // var controller = new ScrollMagic.Controller();
-  sceneMaker(scene2, trigger2, "0%", 0, true, "#navslide1", 'arrow', '#navslide2', 'active', pin2)
+  sceneMaker(scene2, trigger2, "0%", 0, true, "#navslide1", 'arrow', '#navslide2', 'active', pin2);
 
-  // var scene2 = new ScrollMagic.Scene({
-  //   triggerElement: trigger2,
-  //   duration: "0%",
-  //   triggerHook: 0,
-  //   reverse: true
-  // })
-  // .setClassToggle("#navslide1", 'arrow')
-  // .setClassToggle('#navslide2', 'active')
-  // .setPin(pin2)
-  //
-  // controller.addScene(scene2);
+  var scene3 = new ScrollMagic.Scene({});
+  sceneMaker(scene3, trigger3, "0%", 0, true, "#trigger3", "active", "#navslide3", "active", pin3);
 
-  // var controller = new ScrollMagic.Controller();
-  var scene3 = new ScrollMagic.Scene({
-    triggerElement: trigger3,
-    duration: "0%",
-    triggerHook: 0,
-    reverse: true
-  })
-  .setClassToggle("#trigger3", "active")
-  .setClassToggle("#navslide3", "active")
-  .setPin(pin3)
+  var scene4 = new ScrollMagic.Scene({});
+  sceneMaker(scene4, trigger4, "0%", 0, true, "#trigger4", "active", "#navslide4", "arrow_active", pin4);
 
-  controller.addScene(scene3);
-  // var controller = new ScrollMagic.Controller();
-  var scene4 = new ScrollMagic.Scene({
-    triggerElement: trigger4,
-    duration: "0%",
-    triggerHook: 0,
-    reverse: true
-  })
-  .setClassToggle("#trigger4", "active")
-  .setClassToggle("#navslide4", "arrow_active")
-  .setPin(pin4)
+  var scene5 = new ScrollMagic.Scene({});
+  sceneMaker(scene5, trigger5, "0%", 0, true, "#trigger5", "active", "#navslide5", "arrow_active", pin5);
 
-  controller.addScene(scene4);
+  var scene6 = new ScrollMagic.Scene({});
+  sceneMaker(scene6, trigger6, "0%", 0, true, "#trigger6", "active", "#navslide6", "arrow_active", pin6);
 
-  // var controller = new ScrollMagic.Controller();
-  var scene5 = new ScrollMagic.Scene({
-    triggerElement: trigger5,
-    duration: "0%",
-    triggerHook: 0,
-    reverse: true
-  })
-  .setClassToggle("#trigger5", "active")
-  .setClassToggle("#navslide5", "arrow_active")
-  .setPin(pin5)
+  var scene7 = new ScrollMagic.Scene({});
+  sceneMaker(scene7, trigger7, "0%", 0, true, "#trigger7", "active", "#navslide7", "arrow_active", pin7);
 
-  controller.addScene(scene5);
-  // var controller = new ScrollMagic.Controller();
-  var scene6 = new ScrollMagic.Scene({
-    triggerElement: trigger6,
-    duration: "0%",
-    triggerHook: 0,
-    reverse: true
-  })
-  .setClassToggle("#trigger6", "active")
-  .setClassToggle("#navslide6", "arrow_active")
-  .setPin(pin6)
+  var scene8 = new ScrollMagic.Scene({});
+  sceneMaker(scene8, trigger8, "0%", 0, true, "#trigger8", "active", "#navslide8", "arrow_active", pin8);
 
-  controller.addScene(scene6);
+  var scene9 = new ScrollMagic.Scene({});
+  sceneMaker(scene9, trigger9, "0%", 0, true, "#trigger9", "active", "#navslide9", "arrow_active", pin9);
 
-  // var controller = new ScrollMagic.Controller();
-  var scene7 = new ScrollMagic.Scene({
-    triggerElement: trigger7,
-    duration: "0%",
-    triggerHook: 0,
-    reverse: true
-  })
-  .setClassToggle("#trigger7", "active")
-  .setClassToggle("#navslide7", "arrow_active")
-  .setPin(pin7)
-
-  controller.addScene(scene7);
-
-  // var controller = new ScrollMagic.Controller();
-  var scene8 = new ScrollMagic.Scene({
-    triggerElement: trigger8,
-    duration: "0%",
-    triggerHook: 0,
-    reverse: true,
-  })
-  .setClassToggle("#trigger8", "active")
-  .setClassToggle("#navslide8", "arrow_active")
-  .setPin(pin8)
-
-  controller.addScene(scene8);
-
-  // var controller = new ScrollMagic.Controller();
-  var scene9 = new ScrollMagic.Scene({
-  triggerElement: trigger9,
-  duration: "0%",
-  triggerHook: 0,
-  reverse: true
-  })
-  .setClassToggle("#trigger9", "active")
-  .setClassToggle("#navslide9", "arrow_active")
-  .setPin(pin9)
-
-  controller.addScene(scene9);
-
-  var controller = new ScrollMagic.Controller();
-  var scene10 = new ScrollMagic.Scene({
-    triggerElement: trigger10,
-    duration: "0%",
-    triggerHook: 0,
-    reverse: true
-  })
-  .setClassToggle("#trigger10", "active")
-  .setClassToggle("#navslide10", "arrow_active")
-  .setPin(pin10)
-
-  controller.addScene(scene9);
+  var scene10 = new ScrollMagic.Scene({});
+  sceneMaker(scene10, trigger10, "0%", 0, true, "#trigger10", "active", "#navslide10", "arrow_active", pin10);
 
   var country_code = 0,
       flag_position_in_array = 0,
