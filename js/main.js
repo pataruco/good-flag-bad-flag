@@ -1,6 +1,30 @@
 
 $(document).ready(function(){
   var controller = new ScrollMagic.Controller();
+
+  function sceneMaker(
+    sceneName,
+    triggerElement,
+    duration,
+    triggerHook,
+    reverse,
+    setClassToggle1,
+    setClassToggle2,
+    setClassToggle3,
+    setClassToggle4,
+    setPin) {
+        sceneName = new ScrollMagic.Scene({
+        triggerElement: triggerElement,
+        duration: duration,
+        triggerHook: triggerHook,
+        reverse: reverse
+      })
+      .setClassToggle(setClassToggle1, setClassToggle2)
+      .setClassToggle(setClassToggle3, setClassToggle4)
+      .setPin(setPin)
+
+      return controller.addScene(sceneName);
+  }
   var scene1 = new ScrollMagic.Scene({
     triggerElement: trigger1,
     duration: "0%",
@@ -11,18 +35,22 @@ $(document).ready(function(){
   .setPin(pin1)
 
   controller.addScene(scene1);
-  // var controller = new ScrollMagic.Controller();
-  var scene2 = new ScrollMagic.Scene({
-    triggerElement: trigger2,
-    duration: "0%",
-    triggerHook: 0,
-    reverse: true
-  })
-  .setClassToggle("#navslide1", 'arrow')
-  .setClassToggle('#navslide2', 'active')
-  .setPin(pin2)
 
-  controller.addScene(scene2);
+  var scene2 = new ScrollMagic.Scene({});
+  // var controller = new ScrollMagic.Controller();
+  sceneMaker(scene2, trigger2, "0%", 0, true, "#navslide1", 'arrow', '#navslide2', 'active', pin2)
+
+  // var scene2 = new ScrollMagic.Scene({
+  //   triggerElement: trigger2,
+  //   duration: "0%",
+  //   triggerHook: 0,
+  //   reverse: true
+  // })
+  // .setClassToggle("#navslide1", 'arrow')
+  // .setClassToggle('#navslide2', 'active')
+  // .setPin(pin2)
+  //
+  // controller.addScene(scene2);
 
   // var controller = new ScrollMagic.Controller();
   var scene3 = new ScrollMagic.Scene({
@@ -355,7 +383,8 @@ $(document).ready(function(){
 
   // START GROUP 6 FUNCTION SPECIAL - UPDATE SCORE
   function updateScore(){
-    guessnumber = guessnumber + 1;
+    guessnumber ++;
+    // guessnumber = guessnumber + 1;
     $('#scoreboard').addClass('visible');
     $('#yourscore').text(score);
     $('#totalscore').text('/' + guessnumber);
